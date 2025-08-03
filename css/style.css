@@ -1,63 +1,107 @@
-/* Base styles */
-* {
+/* Base reset */
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Unbounded', sans-serif;
     background: #000;
     color: #fff;
-    line-height: 1.6;
 }
 
-.intro {
-    min-height: 100vh;
-    background: url('https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+#smooth-wrapper {
+    overflow: hidden;
+}
+
+.section {
+    padding: min(15vh, 8rem) 5vw;
+}
+
+.section__heading {
+    margin: 0 0 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Hero */
+.section--hero {
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
-.intro__title {
-    font-size: 3rem;
-    letter-spacing: 2px;
+.hero__title {
+    font-size: clamp(2.5rem, 6vw, 6rem);
+    margin: 0 0 1rem;
 }
 
-.specs {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 4rem 2rem;
-    background: #111;
+.hero__subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+    opacity: 0.8;
 }
 
-.specs__model,
-.specs__details {
-    flex: 1 1 300px;
-    padding: 1rem;
+/* Product */
+.section--product {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    align-items: center;
 }
 
-.specs__model h2 {
+.product__media img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product__title {
     margin-top: 0;
     font-size: 2rem;
 }
 
-.specs__details ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+/* Features */
+.features {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-.specs__details li {
-    margin-bottom: 0.5rem;
+.features__item {
+    background: #111;
+    padding: 2rem;
+    border-radius: 8px;
 }
 
-@media (max-width: 768px) {
-    .intro__title {
-        font-size: 2.2rem;
-    }
-    .specs {
-        flex-direction: column;
-    }
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
 }
+
+.gallery__item {
+    overflow: hidden;
+}
+
+.gallery__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Contact */
+.section--contact {
+    text-align: center;
+}
+
+.footer {
+    margin-top: 3rem;
+    font-size: 0.875rem;
+    color: #888;
+}
+
