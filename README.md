@@ -16,7 +16,3 @@
 
 ## 🚧 En cours de développement
 Ce projet est conçu comme un laboratoire d’expérimentations UI/UX. Il sera enrichi progressivement de nouvelles animations et interactions.
-
----
-
-Tu veux que je t’aide à démarrer un `index.html` ou une première animation GSAP ?
